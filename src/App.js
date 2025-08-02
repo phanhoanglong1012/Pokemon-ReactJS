@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './components/SearchBar';
+import SearchButton from './components/SearchButton';
+import axios from 'axios';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="TitleSection">
+        <h1>Pokemon Wiki</h1>
+        <SearchBar />
+        <SearchButton />
+      </div>
+      <div>
+        {/* <PokemonList /> */}
+      </div>
     </div>
   );
 }
