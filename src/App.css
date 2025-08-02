@@ -17,7 +17,7 @@ body {
 
 /* Header */
 .TitleSection {
-  background: linear-gradient(135deg, #fd3d3d, #ff6b6b);
+  background: linear-gradient(135deg, #e83434, #ff5454);
   width: 100%;
   height: 350px;
   display: flex;
