@@ -1,9 +1,11 @@
-const SearchButton = () => {
+const SearchButton = ({ onClick }) => {
     return (
         <div>
-            <button className="search-button">Tìm kiếm</button>
+            <button className="search-button" onClick={onClick}>
+                Tìm kiếm
+            </button>
         </div>
     );
-}
+};
 
 export default SearchButton;

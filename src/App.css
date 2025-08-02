@@ -3,6 +3,7 @@
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
+  flex-direction: column;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 .TitleSection {
-  background-color: #5089FF;
+  background-color: #fd3d3d;
   width: 100%;
   height: 300px;
   display: flex;
@@ -27,23 +28,157 @@ body {
   width: 300px;
   height: 35px;
   border-radius: 10px;
-  border: 2px inset #0055ff;
+  border: 2px inset #3364b0;
   font-size: 15px;
   padding-left: 15px;
 }
 
 .search-button {
-  width: 150px;
-  height: 35px;
-  font-size: 17px;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 600;
   margin-top: 20px;
   padding-left: 1px;
-  background-color: #0055ff;
+  background-color: #3364b0;
   border-radius: 8px;
-  border: 2px outset #0055ff;
-  color: white
+  border: 2px outset #17376c;
+  color: white;
+}
+
+.logo {
+  height: 120px;
+  margin-bottom: 20px;
 }
 
 .search-button:hover {
   cursor: pointer;
+}
+
+.pokemon-list-wrapper {
+  text-align: center;
+}
+
+.error-text {
+  color: red;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* chia 5 cột */
+  row-gap: 30px;
+  column-gap: 30px;
+  /* khoảng cách ngang 30px */
+  padding: 0 160px;
+  /* cách lề trái/phải 100px */
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.no-result-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  /* cao 300px, hoặc 100vh nếu muốn full màn hình */
+  font-size: 50px;
+  color: red;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  /* khoảng cách đều giữa nút và text */
+}
+
+.page-info {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #5089FF;
+  background-color: #5089FF;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pokemon-card {
+  width: 180px;
+  height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  background: #f2f7ff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-card p {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 30px;
+  column-gap: 30px;
+  padding: 0 100px;
 }
